@@ -11,9 +11,9 @@ static string getMirrorString(string str)
     return stringBldr.ToString();
 }
 
-Console.WriteLine("Bonjour !");
-
 string inputUSer = Console.ReadLine();
+
+Console.WriteLine("Bonjour !");
 
 string reversedInputUser = getMirrorString(inputUSer);
 
