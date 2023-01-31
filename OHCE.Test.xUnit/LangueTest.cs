@@ -12,7 +12,7 @@ namespace OHCE.Test.xUnit
         {
             ILangue francais = new Francais();
 
-            var bonjour = francais.Bonjour;
+            var bonjour = francais.direBonjour(PeriodeJournee.Matin);
 
             Assert.Equal(salutationAttendue, bonjour);
 
@@ -24,7 +24,7 @@ namespace OHCE.Test.xUnit
         {
             ILangue anglais = new Anglais();
 
-            var hello = anglais.Bonjour;
+            var hello = anglais.direBonjour(PeriodeJournee.Matin);
 
             Assert.Equal(salutationAttendue, hello);
 

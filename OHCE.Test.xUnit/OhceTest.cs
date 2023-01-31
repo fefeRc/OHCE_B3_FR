@@ -9,22 +9,21 @@ namespace OHCE.Test.xUnit
         [Fact]
         public void miroirTest()
         {
-            Ohce ohce = new Ohce();
 
+            Ohce ohce = new Ohce(null, PeriodeJournee.Soir);
             var sortie = ohce.palyndrome("yolo");
-
             Assert.Equal("oloy", sortie);
         }
 
         [Fact]
         public void palyndromeTest()
         {
-            Ohce ohce = new Ohce();
+            Ohce ohce = new Ohce(new Francais(), PeriodeJournee.Soir);
 
             var sortie = ohce.palyndrome("kayak");
             string palyndrome = "kayak";
 
-            Assert.Contains(palyndrome + " Bien dit !", sortie);
+            Assert.Contains(palyndrome + ohce.getLangue().BienDit, sortie);
         }
 
     }
