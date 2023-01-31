@@ -18,7 +18,7 @@ namespace OHCE.Test.xUnit
         [Fact]
         public void palyndromeTest()
         {
-            Ohce ohce = new Ohce(new Francais(), PeriodeJournee.Soir);
+            Ohce ohce = new Ohce(new SystemLangProxy(), PeriodeJournee.Soir);
 
             var sortie = ohce.palyndrome("kayak");
             string palyndrome = "kayak";

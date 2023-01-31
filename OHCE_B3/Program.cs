@@ -1,24 +1,11 @@
 ﻿using System.Text;
+using OHCE_B3;
 
-static string getMirrorString(string str)
-{
-    StringBuilder stringBldr = new StringBuilder();
+var ohce = new Ohce(new SystemLangProxy(), new SystemTimePeriodeJourneeAdapter().PériodeJournée)
 
-    var reversed = new string(str.Reverse().ToArray());
+Console.WriteLine(new SystemTimePeriodeJourneeAdapter().PériodeJournée);
 
-    stringBldr.Append(reversed);
+Console.WriteLine(ohce.Saluer());
+Console.WriteLine(ohce.palyndrome(Console.ReadLine() ?? String.Empty));
 
-    return stringBldr.ToString();
-}
-
-string inputUSer = Console.ReadLine();
-
-Console.WriteLine("Bonjour !");
-
-string reversedInputUser = getMirrorString(inputUSer);
-
-Console.WriteLine(reversedInputUser);
-
-if(inputUSer == reversedInputUser){Console.WriteLine("Bien dit !");}
-
-Console.WriteLine("Au revoir");
+Console.WriteLine(ohce.AuRevoir());

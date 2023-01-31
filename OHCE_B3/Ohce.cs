@@ -36,7 +36,13 @@ namespace OHCE_B3{
             return _langue;
         }
 
+        public string Saluer(){
+            return _langue.direBonjour(_periodeJournee);
+        }
 
+        public string AuRevoir(){
+            return _langue.AuRevoir;
+        }
 
     }
 }
